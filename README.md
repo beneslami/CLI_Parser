@@ -18,3 +18,13 @@ Each node in the tree is called **param**. Params at the first level of the over
 1. **command params**: constant keywords in the graph (like show, list, all, person)
 
 2. **leaf params**: denotes to user input in the graph (like INPUT1, INPUT2).
+
+There are also incomplete commands when the user traverse each path of the tree. For example,
+``show list ``
+is incomplete and the program should recognize between complete and incomplete commands. In addition, a node cannot have two or more than two leaf params as its children. Generally, the CLI parser should have following responsibilities:
+
+* Validate command syntax
+* Validate leaf values are compatible with leaf expectatoin
+* Send command to backend/application along with the leaf values for command processing.
+* Provide handy and easy method to developer to modify/extend or add more commands
+* provide shortcuts to user to speed up the work.
