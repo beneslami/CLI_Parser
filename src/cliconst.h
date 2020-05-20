@@ -23,4 +23,39 @@
 #define CHILDREN_START_INDEX    3
 #define CHILDREN_END_INDEX      (MAX_OPTION_SIZE -1)
 #define MAX_SAVED_CMDS          30
+#define NEGATE_CHARACTER        "no"
+#define GOTO_TOP_STRING         "exitall"
+#define GOTO_ONE_LVL_UP_STRING  "exit"
+#define CLEAR_SCR_STRING        "clear"
+#define DO                      "do"
+#define SHOW_EXTENSION_PARAM            "SHOW_EXTENSIONS"
+#define SHOW_EXTENSION_PARAM_BRIEF      "SHOW_BRIEF"
+#define SHOW_EXTENSION_PARAM_DETAIL     "SHOW_DETAIL"
+#define SHOW_EXTENSION_PARAM_EXTENSIVE  "SHOW_EXTENSIVE"
+#define SHOW_HELP                   1
+#define SHOW_HISTORY                2
+#define SHOW_HISTORY_N              3
+#define SHOW_REGISTERED_COMMANDS    4
+#define CONFIG_SUPPORTSAVE_ENABLE   5
+#define CONFIG_CONSOLEN_NAME_NAME   6
+#define DEBUG_SHOW_CMDTREE          7
+
+typedef enum{
+    brief,
+    detail,
+    extensive,
+    none
+} show_ext_t;
+
+typedef enum{
+    COMPLETE,
+    ERROR,
+    INVALID_LEAF,
+    USER_INVALID_LEAF,
+    CMD_NOT_FOUND,
+    INCOMPLETE_COMMAND,
+    MULTIPLE_MATCHING_COMMANDS,
+    UNKNOWN
+} CMD_PARSE_STATUS;
+
 #endif
