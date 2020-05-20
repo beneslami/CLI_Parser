@@ -1,0 +1,26 @@
+#ifndef CLICONST_H
+#define CLICONST_H
+
+#define CMD_NAME_SIZE           32
+#define MAX_CMD_TREE_DEPTH      16
+#define LEAF_VALUE_HOLDER_SIZE  64
+#define LEAF_ID_SIZE            32
+#define PARAM_HELP_STRING_SIZE  64
+#define CONS_INPUT_BUFFER_SIZE  2048
+#define TERMINAL_NAME_SIZE      CONS_INPUT_BUFFER_SIZE
+#define TLV_MAX_BUFFER_SIZE     1024
+#define POSSIBILITY_ARRAY_SIZE  10
+#define DEFAULT_DEVICE_NAME     "env@benyamin"
+#define MODE_CHARACTER          "/"
+#define SUBOPTIONS_CHARACTER    "?"
+#define CMD_EXPANSION_CHARACTER "."
+#define MAX_OPTION_SIZE         16
+#define CMD_HIST_RECORD_FILE    "CMD_HIST_RECORD_FILE.txt"
+#define FILE_CMD_SIZE_MAX       (LEAF_VALUE_HOLDER_SIZE * MAX_CMD_TREE_DEPTH)
+#define MODE_PARAM_INDEX        0
+#define SUBOPTIONS_INDEX        1
+#define CMD_EXPANSION_INDEX     2
+#define CHILDREN_START_INDEX    3
+#define CHILDREN_END_INDEX      (MAX_OPTION_SIZE -1)
+#define MAX_SAVED_CMDS          30
+#endif
