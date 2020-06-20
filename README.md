@@ -94,3 +94,6 @@ int <function_name> (char *value);
 The value of the leaf param as typed out by the user on shell is passed as argument to this function as string. You can write your own logic how to validate this value further. This function must return either VALIDATION_SUCCESS or VALIDATION_FAILED as return value.
 
 in main.c file, you must see **node_loopback_callback_handler()** which is invoked when we execute corresponding command. That command has two leaves in it: <node_name> and <loopback_address>. You should be able to fetch the values of these two leaves in application code along with command code.
+
+How to run?
+Simply run **make** in main folder of the project. Then run **./exe**. 
