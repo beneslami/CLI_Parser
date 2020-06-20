@@ -3,7 +3,7 @@
 
 #include "libcliid.h"
 
-typedef struct leaf left_t;
+typedef struct leaf leaf_t;
 typedef struct _param_t_ param_t;
 typedef struct serialized_buffer ser_buff_t;
 typedef enum{
@@ -49,13 +49,15 @@ config_mode_enter_handler(param_t*, ser_buff_t*, op_mode);
 int
 negate_callback(param_t*, ser_buff_t*, op_mode);
 int
-supprotsave_handler(param_t*, ser_buff_t*, op_mode);
+supportsave_handler(param_t*, ser_buff_t*, op_mode);
 int
-show_registered_cmd_handler(param_t*, ser_buff_t*, op_mode);
+show_resgistered_cmd_handler(param_t*, ser_buff_t*, op_mode);
 int
 show_cmd_tree(param_t*, ser_buff_t*, op_mode);
 void
 record_command(char*, char*, unsigned int);
 int
 show_extension_param_handler(param_t*, ser_buff_t*, op_mode);
+int
+show_help_handler(param_t *, ser_buff_t *, op_mode);
 #endif

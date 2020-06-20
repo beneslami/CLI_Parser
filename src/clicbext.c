@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <strlib.h>
+#include <stdlib.h>
 #include "clicbext.h"
 
 void

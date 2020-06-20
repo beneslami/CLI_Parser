@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 extern param_t root;
 extern leaf_type_handler leaf_handler_array[LEAF_MAX];

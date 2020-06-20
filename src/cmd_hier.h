@@ -5,6 +5,8 @@
 #include "cliconst.h"
 #include "libcliid.h"
 #include <string.h>
+#include <assert.h>
+
 #define MIN(a,b) (a < b ? a : b)
 
 #define GET_PARAM_CMD(param)     \
@@ -74,7 +76,7 @@ do{                       \
 
 typedef struct serialized_buffer ser_buff_t;
 typedef int (*cmd_callback)(param_t*, ser_buff_t*, op_mode);
-typedef int (*user_validatoin_callback)(char*);
+typedef int (*user_validation_callback)(char*);
 typedef void (*display_possible_values_callback)(param_t*, ser_buff_t*);
 typedef struct _param_t_ param_t;
 typedef struct cmd{
@@ -106,7 +108,7 @@ struct _param_t_{
   param_t *options[MAX_OPTION_SIZE];
   param_t *parent;
   display_possible_values_callback disp_callback;
-  int CMDMODE;
+  int CMDCODE;
 };
 char*
 get_str_leaf_type(leaf_type_t);

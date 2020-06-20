@@ -36,7 +36,7 @@ is_serialized_buffer_empty(ser_buff_t*);
 int
 get_serialize_buffer_size(ser_buff_t*);
 int
-get_serialize_buffer_current_ptr_offset(ser_buff_t );
+get_serialize_buffer_current_ptr_offset(ser_buff_t*);
 char*
 get_serialize_buffer_current_ptr(ser_buff_t*);
 void
@@ -103,4 +103,4 @@ do{                                                                             
     buff->next += sizeof(type);							\
 }while(0);
 
-#endit
+#endif

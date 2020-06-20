@@ -4,6 +4,10 @@
 #include "cmd_hier.h"
 #include "libcliid.h"
 #include "serialize.h"
+#include <stdlib.h>
+#include <assert.h>
+#include <stdio.h>
+
 #pragma pack (push,1)
 typedef struct tlv_struct{
   leaf_type_t leaf_type;
