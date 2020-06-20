@@ -6,9 +6,8 @@ TARGET:exe ${CLILIB}
 
 OBJ=cmd_hier.o parser.o serialize.o string_util.o clistd.o clicbext.o
 
-exe:testapp.o ${CLILIB}
+exe:
 	@echo "Building final executable"
-	@ ${CC} testapp.o -L . -lcli -o exe 
 
 cmd_hier.o:cmd_hier.c
 		@echo "Building cmd_hier.o"
@@ -33,10 +32,6 @@ clistd.o:clistd.c
 clicbext.o:clicbext.c
 	@echo "Building clicbext.o"
 	@ ${CC} ${CFLAGS} -c ${INCLUDES} clicbext.c -o clicbext.o
-
-testapp.o:testapp.c
-	@echo "Building testapp.o"
-	@ ${CC} ${CFLAGS} -c ${INCLUDES} testapp.c -o testapp.o
 
 ${CLILIB}: ${OBJ}
 	@echo "Building Library ${CLILIB}"
